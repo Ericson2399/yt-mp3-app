@@ -1,0 +1,6 @@
+﻿services:
+  - type: web
+    name: youtube-mp3-app
+    runtime: python
+    buildCommand: "apt-get update && apt-get install -y ffmpeg && pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
